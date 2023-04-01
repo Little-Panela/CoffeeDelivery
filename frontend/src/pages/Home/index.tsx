@@ -1,7 +1,8 @@
 
 
+import { Counter } from "../../components/Counter";
 import {
-  ButtonPlus,
+  
   HomeContainer,
   HomeTextField,
   HomeWrapper,
@@ -16,8 +17,7 @@ import {
 
   RowContainer,
   TypeBox2,
-  Counter,
-  ButtonMenos,
+ 
 } from "./styles";
 // import { Coffee } from "@phosphor-icons/react";
 
@@ -64,10 +64,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+       
               </RowContainer>
             </CoffeeWrapper>
 
@@ -79,10 +76,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
 
@@ -94,10 +88,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
 
@@ -114,10 +105,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
           </ItensContainer>
@@ -136,10 +124,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <ItensContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </ItensContainer>
             </CoffeeWrapper>
 
@@ -156,10 +141,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
 
@@ -177,10 +159,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
 
@@ -198,10 +177,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
           </ItensContainer>
@@ -220,10 +196,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
             <CoffeeWrapper>
@@ -239,10 +212,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
 
@@ -260,10 +230,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
 
@@ -281,10 +248,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
           </ItensContainer>
@@ -303,10 +267,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
 
@@ -324,10 +285,7 @@ export function Home() {
               <h4>O tradicional café feito com água quente e grãos moídos</h4>
               <RowContainer>
               <span>R$9,90</span>
-              <Counter>
-                <ButtonMenos>-</ButtonMenos>
-                <ButtonPlus>+</ButtonPlus>
-              </Counter>
+              <Counter/>
               </RowContainer>
             </CoffeeWrapper>
           </ItensContainer>
