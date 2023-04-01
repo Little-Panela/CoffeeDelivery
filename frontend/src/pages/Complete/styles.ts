@@ -18,10 +18,8 @@ height: 591px;
 left: 160px;
 top: 182px;`;
 export const AddressCard = styled.div`
-Width
-Fill (640px)
-Height
-Hug (372px)
+Width:640px
+Height(372px)
 Radius
 6px
 Padding
@@ -42,7 +40,7 @@ padding: 40px;
 gap: 32px;
 
 width: 640px;
-height: 372px;
+height: 320px;
 
 /* Base/Card */
 
@@ -95,11 +93,13 @@ font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
-line-height: 130%;
-/* or 18px */
+line-height: 18px;
+
 
 display: flex;
 align-items: center;
+margin-left: 20px;
+margin-bottom: 20px;
 
 /* Base/Text */
 
@@ -129,6 +129,7 @@ gap: 4px;
 width: 200px;
 height: 42px;
 
+maring-top: 20px;
 /* Base/Input */
 
 background: #EEEDED;
@@ -154,6 +155,7 @@ flex-direction: row;
 align-items: center;
 padding: 12px;
 gap: 4px;
+
 
 width: 200px;
 height: 42px;
@@ -183,6 +185,7 @@ align-items: center;
 padding: 0px;
 gap: 12px;
 
+margin-top: 20px;
 width: 560px;
 height: 42px;
 
@@ -209,6 +212,7 @@ align-items: center;
 padding: 12px;
 gap: 4px;
 
+
 width: 200px;
 height: 42px;
 
@@ -226,7 +230,7 @@ flex: none;
 order: 0;
 flex-grow: 0;`;
 
-export const CityInput = styled.div `
+export const CityInput = styled.input `
 /* Input */
 
 
@@ -301,6 +305,7 @@ align-items: center;
 padding: 0px;
 gap: 12px;
 
+margin-top: 20px;
 width: 560px;
 height: 42px;
 
@@ -324,6 +329,7 @@ align-items: center;
 padding: 12px;
 gap: 4px;
 
+margin-top: 20px;
 width: 560px;
 height: 42px;
 
@@ -343,7 +349,7 @@ align-self: stretch;
 flex-grow: 0;
 `;
 
-export const ComplementoInput = styled.div`
+export const ComplementoInput = styled.input`
 box-sizing: border-box;
 
 /* Auto layout */
@@ -381,7 +387,7 @@ gap: 32px;
 margin-top: 10px;
 
 width: 640px;
-height: 207px;
+height: 170px;
 
 /* Base/Card */
 
@@ -440,7 +446,7 @@ line-height: 130%;
 
 display: flex;
 align-items: center;
-
+margin-left: 20px;
 /* Base/Text */
 
 color: #574F4D;
@@ -512,15 +518,17 @@ flex-grow: 1;
 
 h1{
   
-width: 115px;
+width: 125px;
 height: 19px;
+margin-bottom: 20px;
+margin-left: 5px;
 
 /* Components/Button S */
 
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 12px;
+font-size: 11px;
 line-height: 160%;
 /* or 19px */
 
