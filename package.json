@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@types/styled-components-react-native": "^5.2.1",
+    "styled-components": "^5.3.9"
+  }
+}
