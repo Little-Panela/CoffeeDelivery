@@ -28,73 +28,98 @@ export class ProductsController {
   async createFirst(@Body() body: CreateProductBody) {
     const { name, description, imageUrl, price, quantity } = body;
 
-    const { product } = await this.createFirstProduct.execute({
-      name,
-      description,
-      imageUrl,
-      price,
-      quantity,
-    });
+    try {
+      const { product } = await this.createFirstProduct.execute({
+        name,
+        description,
+        imageUrl,
+        price,
+        quantity,
+      });
 
-    return { product };
+      return { product };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 
   @Post('/createLast')
   async createLast(@Body() body: CreateProductBody) {
     const { name, description, imageUrl, price, quantity } = body;
 
-    const { product } = await this.createLastProduct.execute({
-      name,
-      description,
-      imageUrl,
-      price,
-      quantity,
-    });
+    try {
+      const { product } = await this.createLastProduct.execute({
+        name,
+        description,
+        imageUrl,
+        price,
+        quantity,
+      });
 
-    return { product };
+      return { product };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 
   @Post('/removeFirst')
   async removeFirst() {
-    const { products } = await this.removeFirstProduct.execute();
-
-    return { products };
+    try {
+      const { products } = await this.removeFirstProduct.execute();
+      return { products };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 
   @Post('/removeLast')
   async removeLast() {
-    const { products } = await this.removeLastProduct.execute();
-
-    return { products };
+    try {
+      const { products } = await this.removeLastProduct.execute();
+      return { products };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 
   @Get('/')
   async list() {
-    const { products } = await this.listProducts.execute();
+    try {
+      const { products } = await this.listProducts.execute();
 
-    return { products };
+      return { products };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 
   @Get('id/:productId')
   async findProductId(@Param('productId') productId: string) {
-    const { product } = await this.findProductById.execute({
-      productId,
-    });
-
-    return {
-      product,
-    };
+    try {
+      const { product } = await this.findProductById.execute({
+        productId,
+      });
+      return {
+        product,
+      };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 
   @Get('name/:name')
   async findProductName(@Param('name') name: string) {
-    const { product } = await this.findProductByName.execute({
-      name,
-    });
+    try {
+      const { product } = await this.findProductByName.execute({
+        name,
+      });
 
-    return {
-      product,
-    };
+      return {
+        product,
+      };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 
   @Patch(':id')
@@ -112,15 +137,19 @@ export class ProductsController {
   ) {
     const { name, description, imageUrl, price, quantity, createdAt } = body;
 
-    await this.updateProductById.execute({
-      id,
-      name,
-      description,
-      imageUrl,
-      price,
-      quantity,
-      createdAt,
-    });
+    try {
+      await this.updateProductById.execute({
+        id,
+        name,
+        description,
+        imageUrl,
+        price,
+        quantity,
+        createdAt,
+      });
+    } catch (error) {
+      return { Error: error.message };
+    }
 
     const { product } = await this.findProductById.execute({
       productId: id,
@@ -135,11 +164,15 @@ export class ProductsController {
   async buy(@Body() body: { productId: string; quantity: number }) {
     const { productId, quantity } = body;
 
-    await this.buyProduct.execute({
-      productId,
-      quantity,
-    });
+    try {
+      await this.buyProduct.execute({
+        productId,
+        quantity,
+      });
 
-    return 'Produto comprado com sucesso!';
+      return { Result: 'Produto comprado com sucesso!' };
+    } catch (error) {
+      return { Error: error.message };
+    }
   }
 }
