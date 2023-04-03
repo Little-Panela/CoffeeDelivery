@@ -9,6 +9,7 @@ import { CreateFirstProduct } from './../../../application/use-cases/products/cr
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { ListProducts } from 'src/application/use-cases/products/list-products';
 import { CreateProductBody } from '../dtos/create-product-body';
+import { ProductViewModel } from 'src/infra/view-models/product-view-model';
 
 @Controller('products')
 export class ProductsController {
@@ -37,7 +38,7 @@ export class ProductsController {
         quantity,
       });
 
-      return { product };
+      return { product: ProductViewModel.toHTTP(product) };
     } catch (error) {
       return { Error: error.message };
     }
@@ -56,7 +57,7 @@ export class ProductsController {
         quantity,
       });
 
-      return { product };
+      return { product: ProductViewModel.toHTTP(product) };
     } catch (error) {
       return { Error: error.message };
     }
@@ -66,7 +67,7 @@ export class ProductsController {
   async removeFirst() {
     try {
       const { products } = await this.removeFirstProduct.execute();
-      return { products };
+      return { products: products.map(ProductViewModel.toHTTP) };
     } catch (error) {
       return { Error: error.message };
     }
@@ -76,7 +77,7 @@ export class ProductsController {
   async removeLast() {
     try {
       const { products } = await this.removeLastProduct.execute();
-      return { products };
+      return { products: products.map(ProductViewModel.toHTTP) };
     } catch (error) {
       return { Error: error.message };
     }
@@ -87,7 +88,7 @@ export class ProductsController {
     try {
       const { products } = await this.listProducts.execute();
 
-      return { products };
+      return { products: products.map(ProductViewModel.toHTTP) };
     } catch (error) {
       return { Error: error.message };
     }
@@ -100,7 +101,7 @@ export class ProductsController {
         productId,
       });
       return {
-        product,
+        product: ProductViewModel.toHTTP(product),
       };
     } catch (error) {
       return { Error: error.message };
@@ -115,7 +116,7 @@ export class ProductsController {
       });
 
       return {
-        product,
+        product: ProductViewModel.toHTTP(product),
       };
     } catch (error) {
       return { Error: error.message };
@@ -156,7 +157,7 @@ export class ProductsController {
     });
 
     return {
-      product,
+      product: ProductViewModel.toHTTP(product),
     };
   }
 
