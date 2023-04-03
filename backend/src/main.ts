@@ -2,9 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { configurationService } from './config/config.service';
 
-const PORT = configurationService.getValue('PORT');
+const PORT = 3333;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

@@ -1,25 +1,8 @@
-import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { APP_GUARD } from '@nestjs/core';
-import { JwtModule } from '@nestjs/jwt';
-import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
-import { configurationService } from './config/config.service';
-import { AppController } from './app.controller';
+import { DatabaseModule } from './infra/database/database.module';
+import { HttpModule } from './infra/http/http.module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot(),
-    ThrottlerModule.forRootAsync(configurationService.getThrottleConfig()),
-    HttpModule.register(configurationService.getHttpModuleConfig()),
-    JwtModule.register({}),
-  ],
-  controllers: [AppController],
-  providers: [
-    {
-      provide: APP_GUARD,
-      useClass: ThrottlerGuard,
-    },
-  ],
+  imports: [HttpModule, DatabaseModule],
 })
 export class AppModule {}
