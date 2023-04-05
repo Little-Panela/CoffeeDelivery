@@ -65,6 +65,8 @@ export class LocalProductsRepository implements ProductsRepository {
   async save(product: Product): Promise<void> {
     const row = LocalProductMapper.toLocal(product);
 
+    console.log(row);
+
     await this.products.update(row.id, row);
   }
 }

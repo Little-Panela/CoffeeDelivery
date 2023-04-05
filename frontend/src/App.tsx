@@ -1,18 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import { Home } from './pages/Home'
-import { Complete } from './pages/Complete'
-import { Success } from './Success'
-function App() {
-  const [count, setCount] = useState(0)
+import { GlobalContext } from "./contexts/GlobalContext";
+import { Router } from "./routes";
 
+export function App() {
   return (
-   
-      <div>
-       <Success/>
-    </div>
-  )
+    <GlobalContext>
+      <Router />
+    </GlobalContext>
+  );
 }
-
-export default App

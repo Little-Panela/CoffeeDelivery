@@ -1,24 +1,32 @@
 import styled from "styled-components";
 
-export const CompleteContainer = styled.main`
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 `;
 
+export const CompleteContainer = styled.main``;
+
 export const AddressContainer = styled.div`
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px; */
 
-position: absolute;
-width: 640px;
-height: 591px;
-left: 160px;
-top: 182px;`;
+  /* position: absolute; */
+  /* width: 640px;
+  height: 591px;
+  left: 160px;
+  top: 182px; */
+`;
 export const AddressCard = styled.div`
-Width:640px
+  /* Width:640px
 Height(372px)
 Radius
 6px
@@ -27,665 +35,669 @@ Padding
 Gap
 32px
 Base/Card
-#F3F2F2
-/* Coffee Card */
+#F3F2F2 */
+  /* Coffee Card */
 
+  /* Auto layout */
 
-/* Auto layout */
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px; */
+  padding: 20px;
 
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 40px;
-gap: 32px;
+  width: 640px;
+  height: 350px;
 
-width: 640px;
-height: 320px;
+  /* Base/Card */
 
-/* Base/Card */
+  background: #f3f2f2;
+  border-radius: 6px;
 
-background: #F3F2F2;
-border-radius: 6px;
+  /* Inside auto layout */
 
-/* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
+  h1 {
+    width: 530px;
+    height: 21px;
 
-h1{
-  width: 530px;
-height: 21px;
+    /* Text/Regular M */
 
-/* Text/Regular M */
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    /* identical to box height, or 21px */
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 130%;
-/* identical to box height, or 21px */
+    display: flex;
+    align-items: center;
 
-display: flex;
-align-items: center;
+    /* Base/Subtitle */
 
-/* Base/Subtitle */
+    color: #403937;
 
-color: #403937;
+    /* Inside auto layout */
 
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
 
-/* Inside auto layout */
+  h2 {
+    width: 530px;
+    height: 21px;
 
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-}
+    /* Text/Regular S */
 
-h2{
-  width: 530px;
-height: 21px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
 
-/* Text/Regular S */
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
+    /* Base/Text */
 
+    color: #574f4d;
 
-display: flex;
-align-items: center;
-margin-left: 20px;
-margin-bottom: 20px;
+    /* Inside auto layout */
 
-/* Base/Text */
-
-color: #574F4D;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-}
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
 `;
 
 export const CEPInput = styled.input`
-box-sizing: border-box;
+  box-sizing: border-box;
 
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px;
-gap: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 4px;
 
-width: 200px;
-height: 42px;
+  width: 200px;
+  height: 42px;
 
-maring-top: 20px;
-/* Base/Input */
+  maring-top: 20px;
+  /* Base/Input */
 
-background: #EEEDED;
-/* Base/Button */
+  background: #eeeded;
+  /* Base/Button */
 
-border: 1px solid #E6E5E5;
-border-radius: 4px;
+  border: 1px solid #e6e5e5;
+  border-radius: 4px;
 
-/* Inside auto layout */
+  /* Inside auto layout */
 
-flex: none;
-order: 0;
-flex-grow: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 `;
 
 export const NumberInput = styled.input`
-box-sizing: border-box;
+  box-sizing: border-box;
 
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px;
-gap: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 4px;
 
+  width: 200px;
+  height: 42px;
 
-width: 200px;
-height: 42px;
+  /* Base/Input */
 
-/* Base/Input */
+  background: #eeeded;
+  /* Base/Button */
 
-background: #EEEDED;
-/* Base/Button */
+  border: 1px solid #e6e5e5;
+  border-radius: 4px;
 
-border: 1px solid #E6E5E5;
-border-radius: 4px;
+  /* Inside auto layout */
 
-/* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+`;
+export const InforBox = styled.div`
+  /* Info */
 
-flex: none;
-order: 0;
-flex-grow: 0;`;
-export const InforBox = styled.div `
-/* Info */
+  /* Auto layout */
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
 
-/* Auto layout */
+  margin-top: 20px;
+  width: 560px;
+  height: 42px;
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
+  /* Inside auto layout */
 
-margin-top: 20px;
-width: 560px;
-height: 42px;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
 `;
 
 export const NeighborhoodInput = styled.input`
-/* Input */
+  /* Input */
 
+  box-sizing: border-box;
 
-box-sizing: border-box;
+  /* Auto layout */
 
-/* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 4px;
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px;
-gap: 4px;
+  width: 200px;
+  height: 42px;
 
+  /* Base/Input */
 
-width: 200px;
-height: 42px;
+  background: #eeeded;
+  /* Base/Button */
 
-/* Base/Input */
+  border: 1px solid #e6e5e5;
+  border-radius: 4px;
 
-background: #EEEDED;
-/* Base/Button */
+  /* Inside auto layout */
 
-border: 1px solid #E6E5E5;
-border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+`;
 
-/* Inside auto layout */
+export const CityInput = styled.input`
+  /* Input */
 
-flex: none;
-order: 0;
-flex-grow: 0;`;
+  box-sizing: border-box;
 
-export const CityInput = styled.input `
-/* Input */
+  /* Auto layout */
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 4px;
 
-box-sizing: border-box;
+  width: 276px;
+  height: 42px;
 
-/* Auto layout */
+  /* Base/Input */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px;
-gap: 4px;
+  background: #eeeded;
+  /* Base/Button */
 
-width: 276px;
-height: 42px;
+  border: 1px solid #e6e5e5;
+  border-radius: 4px;
 
-/* Base/Input */
+  /* Inside auto layout */
 
-background: #EEEDED;
-/* Base/Button */
-
-border: 1px solid #E6E5E5;
-border-radius: 4px;
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 1;`;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+`;
 
 export const BillInput = styled.input`
-/* Input */
+  /* Input */
 
+  box-sizing: border-box;
 
-box-sizing: border-box;
+  /* Auto layout */
 
-/* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 4px;
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px;
-gap: 4px;
+  width: 60px;
+  height: 42px;
 
-width: 60px;
-height: 42px;
+  /* Base/Input */
 
-/* Base/Input */
+  background: #eeeded;
+  /* Base/Button */
 
-background: #EEEDED;
-/* Base/Button */
+  border: 1px solid #e6e5e5;
+  border-radius: 4px;
 
-border: 1px solid #E6E5E5;
-border-radius: 4px;
+  /* Inside auto layout */
 
-/* Inside auto layout */
-
-flex: none;
-order: 2;
-flex-grow: 0;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
 `;
 
 export const AddressInfoBox = styled.div`
-/* Info */
+  /* Info */
 
+  /* Auto layout */
 
-/* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
+  margin-top: 20px;
+  width: 560px;
+  height: 42px;
 
-margin-top: 20px;
-width: 560px;
-height: 42px;
+  /* Inside auto layout */
 
-
-/* Inside auto layout */
-
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
 `;
 
 export const AddressInput = styled.input`
-box-sizing: border-box;
+  box-sizing: border-box;
 
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px;
-gap: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 4px;
 
-margin-top: 20px;
-width: 560px;
-height: 42px;
+  margin-top: 20px;
+  width: 560px;
+  height: 42px;
 
-/* Base/Input */
+  /* Base/Input */
 
-background: #EEEDED;
-/* Base/Button */
+  background: #eeeded;
+  /* Base/Button */
 
-border: 1px solid #E6E5E5;
-border-radius: 4px;
+  border: 1px solid #e6e5e5;
+  border-radius: 4px;
 
-/* Inside auto layout */
+  /* Inside auto layout */
 
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 `;
 
 export const ComplementoInput = styled.input`
-box-sizing: border-box;
+  box-sizing: border-box;
 
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px;
-gap: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 4px;
 
-width: 348px;
-height: 42px;
+  width: 348px;
+  height: 42px;
 
-/* Base/Input */
+  /* Base/Input */
 
-background: #EEEDED;
-/* Base/Button */
+  background: #eeeded;
+  /* Base/Button */
 
-border: 1px solid #E6E5E5;
-border-radius: 4px;
+  border: 1px solid #e6e5e5;
+  border-radius: 4px;
 
-/* Inside auto layout */
+  /* Inside auto layout */
 
-flex: none;
-order: 1;
-flex-grow: 1;`;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+`;
 export const PaymentCard = styled.div`
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 40px;
-gap: 32px;
-margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 32px;
+  margin-top: 10px;
 
-width: 640px;
-height: 170px;
+  width: 640px;
+  height: 170px;
 
-/* Base/Card */
+  /* Base/Card */
 
-background: #F3F2F2;
-border-radius: 6px;
+  background: #f3f2f2;
+  border-radius: 6px;
 
-/* Inside auto layout */
+  /* Inside auto layout */
 
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 
-h3{
-  width: 530px;
-height: 21px;
+  h3 {
+    width: 530px;
+    height: 21px;
 
-/* Text/Regular M */
+    /* Text/Regular M */
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 130%;
-/* identical to box height, or 21px */
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    /* identical to box height, or 21px */
 
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 
-/* Base/Subtitle */
+    /* Base/Subtitle */
 
-color: #403937;
+    color: #403937;
 
+    /* Inside auto layout */
 
-/* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
 
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-}
+  p {
+    width: 530px;
+    height: 21px;
 
-p{
+    /* Text/Regular S */
 
-  width: 530px;
-height: 21px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
 
-/* Text/Regular S */
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    /* Base/Text */
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 130%;
-/* or 18px */
+    color: #574f4d;
 
-display: flex;
-align-items: center;
-margin-left: 20px;
-/* Base/Text */
+    /* Inside auto layout */
 
-color: #574F4D;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-}
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
 `;
 
-export const PaymenteContainer = styled.div``
-export const PaymentInforBox = styled.div `
-/* Auto layout */
+export const PaymenteContainer = styled.div``;
+export const PaymentInforBox = styled.div`
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
 
-width: 560px;
-height: 44px;
+  width: 560px;
+  height: 44px;
 
+  /* Inside auto layout */
 
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-
-
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 `;
 
 export const UserPayment = styled.button`
-box-sizing: border-box;
+  box-sizing: border-box;
 
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 16px;
-gap: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
 
-width: 178.67px;
-height: 51px;
+  width: 178.67px;
+  height: 51px;
 
-/* Brand/Purple Light */
+  /* Brand/Purple Light */
 
-background: #EBE5F9;
-/* Brand/Purple */
+  background: #ebe5f9;
+  /* Brand/Purple */
 
-border: 1px solid #8047F8;
-border-radius: 6px;
+  border: 1px solid #8047f8;
+  border-radius: 6px;
 
-/* Inside auto layout */
+  /* Inside auto layout */
 
-flex: none;
-order: 0;
-flex-grow: 1;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
 
-h1{
-  
-width: 125px;
-height: 19px;
-margin-bottom: 20px;
-margin-left: 5px;
+  h1 {
+    width: 125px;
+    height: 19px;
+    margin-bottom: 20px;
+    margin-left: 5px;
 
-/* Components/Button S */
+    /* Components/Button S */
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 160%;
-/* or 19px */
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 160%;
+    /* or 19px */
 
-text-transform: uppercase;
+    text-transform: uppercase;
 
-/* Base/Text */
+    /* Base/Text */
 
-color: #574F4D;
+    color: #574f4d;
 
+    /* Inside auto layout */
 
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
-}
-`
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+`;
 
 export const CoffeeCard = styled.div`
-/* Coffee Card */
+  /* Coffee Card */
 
+  /* Auto layout */
 
-/* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 24px;
 
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 40px;
-gap: 24px;
+  position: absolute;
+  width: 448px;
+  height: 498px;
+  left: 832px;
+  top: 182px;
 
-position: absolute;
-width: 448px;
-height: 498px;
-left: 832px;
-top: 182px;
+  /* Base/Card */
 
-/* Base/Card */
-
-background: #F3F2F2;
-border-radius: 6px 44px;
+  background: #f3f2f2;
+  border-radius: 6px 44px;
 `;
 
 export const InfoCard = styled.div`
-/* Auto layout */
-
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 20px;
-
-width: 255px;
-height: 64px;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-
-h1{
   /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
 
-width: 255px;
-height: 64px;
+  width: 255px;
+  height: 64px;
 
+  /* Inside auto layout */
 
-/* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 
-flex: none;
-order: 0;
-flex-grow: 0;
-}
+  h1 {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+
+    width: 255px;
+    height: 64px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
 `;
 
 export const TotalCard = styled.div`
-/* Auto layout */
+  /* Auto layout */
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
 
-width: 368px;
-height: 92px;
+  width: 368px;
+  height: 92px;
 
+  /* Inside auto layout */
 
-/* Inside auto layout */
-
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
+  flex: none;
+  order: 4;
+  align-self: stretch;
+  flex-grow: 0;
 `;
 
 export const ConfirmButton = styled.button`
-/* Button */
+  /* Button */
 
+  /* Auto layout */
 
-/* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 8px;
+  gap: 4px;
 
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px 8px;
-gap: 4px;
+  width: 368px;
+  height: 46px;
 
-width: 368px;
-height: 46px;
+  /* Brand / Yellow */
 
-/* Brand / Yellow */
+  background: #dbac2c;
+  border-radius: 6px;
 
-background: #DBAC2C;
-border-radius: 6px;
+  /* Inside auto layout */
 
-/* Inside auto layout */
+  flex: none;
+  order: 5;
+  align-self: stretch;
+  flex-grow: 0;
 
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
+  h2 {
+    width: 133px;
+    height: 22px;
 
-h2{
-  width: 133px;
-height: 22px;
+    /* Components/Button G */
 
-/* Components/Button G */
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    /* or 22px */
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 160%;
-/* or 22px */
+    text-transform: uppercase;
 
-text-transform: uppercase;
+    /* Base/White */
 
-/* Base/White */
+    color: #ffffff;
+    font-stretch: 100;
 
-color: #FFFFFF;
-font-stretch: 100;
+    /* Inside auto layout */
 
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+`;
 
-/* Inside auto layout */
+export const SelectedCoffeesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 43rem;
 
-flex: none;
-order: 0;
-flex-grow: 0;
-}
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+`;
+
+export const DetailsContainer = styled.div`
+  border-radius: 6px 44px 6px 44px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+`;
+
+export const ConfirmationSectionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;

@@ -21,6 +21,9 @@ export class BuyProduct {
 
     product.quantity -= quantity;
 
+    console.log(product);
+
     product.update(product);
+    await this.productsRepository.save(product);
   }
 }

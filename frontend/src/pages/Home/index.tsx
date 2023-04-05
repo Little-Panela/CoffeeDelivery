@@ -1,296 +1,90 @@
-
-
-import { Counter } from "../../components/Counter";
 import {
-  
+  HeaderWrapper,
   HomeContainer,
-  HomeTextField,
   HomeWrapper,
- 
-  ItensContainer,
-  ItensWrapper,
-
-  CoffeeContainer,
-
-  CoffeeWrapper,
-  TypeBox,
-
-  RowContainer,
-  TypeBox2,
- 
+  Item,
+  ItemsWrapper,
+  StoreWrapper,
+  TextField,
 } from "./styles";
-// import { Coffee } from "@phosphor-icons/react";
 
-
+import coffeImage from "../../assets/coffee-image.png";
+import {
+  Coffee as CoffeeIcon,
+  Package,
+  ShoppingCart,
+  Timer,
+} from "phosphor-react";
+import { Coffee, CoffeeCard } from "../../components/CoffeeCard";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api";
 
 export function Home() {
- 
+  const [coffees, setCoffees] = useState<Coffee[]>([]);
+
+  useEffect(() => {
+    api.get("products").then((response) => setCoffees(response.data.products));
+  }, []);
   return (
     <HomeContainer>
       <HomeWrapper>
-        <HomeTextField>
-          <h1>ENCONTRE O CAFÉ PERFEITO PARA QUALQUER HORA DO DIA!</h1>
-
-          <span>
-            Com o Coffee Delivery você recebe o seu café onde estiver, a
-            qualquer hora.
-          </span>
-     
-        </HomeTextField>
-        
-
-        <ItensContainer>
-          <ItensWrapper>
-            <p>Compra simples e segura</p>
-            <p>Entrega rápida e rastreada</p>
-          </ItensWrapper>
-          <ItensWrapper>
-            <p>Embalagem mantém o café intacto</p>
+        <TextField>
+          <HeaderWrapper>
+            <strong>Encontre o café perfeito para qualquer hora do dia</strong>
             <p>
-            {/* <Coffee size={32} /> */}
-            O café chega fresquinho até você</p>
-          </ItensWrapper>
-        </ItensContainer>
+              Com o Coffee Delivery você recebe seu café onde estiver, a
+              qualquer hora
+            </p>
+          </HeaderWrapper>
 
-        <CoffeeContainer>
-          <span>Nossos cafés</span>
+          <ItemsWrapper>
+            <Item color="#C47F17">
+              <div>
+                <ShoppingCart size={16} weight="fill" />
+              </div>
+              <p>Compra simples e segura</p>
+            </Item>
 
-          <ItensContainer>
-            <CoffeeWrapper>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <h5>Expresso Tradicional</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-       
-              </RowContainer>
-            </CoffeeWrapper>
+            <Item color="#DBAC2C">
+              <div>
+                <Package size={16} weight="fill" />
+              </div>
+              <p>Embalagem mantém o café intacto</p>
+            </Item>
 
-            <CoffeeWrapper>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <h5>Expresso Americano</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
+            <Item color="#574F4D">
+              <div>
+                <Timer size={16} weight="fill" />
+              </div>
+              <p>Entrega rápida e rastreada</p>
+            </Item>
 
-            <CoffeeWrapper>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <h5>Expresso Cremoso</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
+            <Item color="#8047F8">
+              <div>
+                <CoffeeIcon size={16} weight="fill" />
+              </div>
+              <p>O café chega fresquinho até você</p>
+            </Item>
+          </ItemsWrapper>
+        </TextField>
 
-            <CoffeeWrapper>
-              <RowContainer>
-            <TypeBox2>
-                <a>TRADICIONAL</a>
-              </TypeBox2>
-              <TypeBox2>
-                <a>TRADICIONAL</a>
-              </TypeBox2>
-              </RowContainer>
-              <h5>Expresso Gelado</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-          </ItensContainer>
-
-          <ItensContainer>
-            <CoffeeWrapper>
-            <ItensContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </ItensContainer>
-              <h5>Café com Leite</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <ItensContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </ItensContainer>
-            </CoffeeWrapper>
-
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Latte</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-
-
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Cappuccino</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-
-
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Macciato</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-          </ItensContainer>
-
-          <ItensContainer>
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Mocaccino</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Chocolate Quente</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-
-
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Cubano</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-
-
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Havaiano</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-          </ItensContainer>
-
-          <ItensContainer>
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Árabe</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-
-
-            <CoffeeWrapper>
-            <RowContainer>
-            <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              <TypeBox>
-                <a>TRADICIONAL</a>
-              </TypeBox>
-              </RowContainer>
-              <h5>Irlandês</h5>
-              <h4>O tradicional café feito com água quente e grãos moídos</h4>
-              <RowContainer>
-              <span>R$9,90</span>
-              <Counter/>
-              </RowContainer>
-            </CoffeeWrapper>
-          </ItensContainer>
-        </CoffeeContainer>
+        <img src={coffeImage} alt="" />
       </HomeWrapper>
+
+      <StoreWrapper>
+        <h2>Nossos cafés</h2>
+
+        {!coffees && <p>Carregando...</p>}
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+          gap: '5rem'
+        }}>
+          {coffees &&
+            coffees.map((item) => <CoffeeCard key={item.id} coffee={item} />)}
+        </div>
+      </StoreWrapper>
     </HomeContainer>
   );
 }

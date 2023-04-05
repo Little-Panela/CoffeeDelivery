@@ -11,6 +11,7 @@ describe('Send notification', () => {
       description: 'Café de qualidade',
       price: 10,
       quantity: 10,
+      imageUrl: '',
     });
 
     expect(productsRepository.products).toHaveLength(1);
