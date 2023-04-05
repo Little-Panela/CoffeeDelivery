@@ -7,9 +7,9 @@ import { FindProductById } from './../../../application/use-cases/products/find-
 import { CreateLastProduct } from './../../../application/use-cases/products/create-last-product';
 import { CreateFirstProduct } from './../../../application/use-cases/products/create-first-product';
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
-import { ListProducts } from 'src/application/use-cases/products/list-products';
+import { ListProducts } from './../../../application/use-cases/products/list-products';
 import { CreateProductBody } from '../dtos/create-product-body';
-import { ProductViewModel } from 'src/infra/view-models/product-view-model';
+import { ProductViewModel } from './../../../infra/view-models/product-view-model';
 
 @Controller('products')
 export class ProductsController {

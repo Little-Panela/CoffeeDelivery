@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ProductsRepository } from 'src/application/repositories/products-repository';
+import { ProductsRepository } from '../../application/repositories/products-repository';
 import { LocalProductsRepository } from './local/repositories/local-products-repository';
 
 @Module({

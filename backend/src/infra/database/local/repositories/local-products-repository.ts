@@ -1,6 +1,6 @@
 import { LocalProductMapper } from './../mappers/local-products-mapper';
-import { Product } from 'src/application/entities/product';
-import { ProductsRepository } from 'src/application/repositories/products-repository';
+import { Product } from '../../../../application/entities/product';
+import { ProductsRepository } from '../../../../application/repositories/products-repository';
 import { Deque } from '../deque';
 
 export class LocalProductsRepository implements ProductsRepository {

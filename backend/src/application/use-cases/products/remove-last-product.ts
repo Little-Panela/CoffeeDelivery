@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { ProductsRepository } from 'src/application/repositories/products-repository';
-import { Product } from 'src/application/entities/product';
+import { ProductsRepository } from '../../../application/repositories/products-repository';
+import { Product } from '../../../application/entities/product';
 
 interface RemoveLastProductResponse {
   products: Product[];
