@@ -17,7 +17,7 @@ export class Product {
     return name.length >= 1 && name.length <= 30;
   }
   private validateDescriptionLength(description: string): boolean {
-    return description.length >= 10 && description.length <= 240;
+    return description.length >= 1 && description.length <= 240;
   }
 
   constructor(props: Replace<ProductProps, { createdAt?: Date }>, id?: string) {
@@ -25,9 +25,7 @@ export class Product {
       throw new Error('Nome do produto deve ter entre 1 e 30 caracteres');
     }
     if (!this.validateDescriptionLength(props.description)) {
-      throw new Error(
-        'Descrição do produto deve ter entre 10 e 240 caracteres',
-      );
+      throw new Error('Descrição do produto deve ter entre 1 e 240 caracteres');
     }
 
     this._id = id ?? randomUUID();
